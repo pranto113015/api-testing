@@ -28,6 +28,7 @@ export default function Logout() {
         );
         localStorage.removeItem("token");
         setMsg("✅ Successfully logged out. Redirecting to login...");
+        console.log("Response Logout successful");
         setTimeout(() => navigate("/login"), 1500);
       } catch (err) {
         console.error(err);

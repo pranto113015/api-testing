@@ -1,4 +1,3 @@
-// src/pages/UserDetail.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -12,10 +11,10 @@ export default function UserDetail() {
       setLoading(true);
       setMsg("");
       try {
-        // ধরুন লগইনের পরে token localStorage তে "token" key তে সেভ করা হয়েছে
+        // Suppose after login the token is saved in localStorage under the key "token"
         const token = localStorage.getItem("token");
         if (!token) {
-          setMsg("❌ Token পাওয়া যায়নি। আগে লগইন করুন।");
+          setMsg("❌ Token not found. Please log in first.");
           setLoading(false);
           return;
         }
@@ -32,7 +31,9 @@ export default function UserDetail() {
         setUser(res.data?.data || res.data);
       } catch (err) {
         console.error(err);
-        setMsg(err.response?.data?.message || "❌ ইউজার ডিটেল আনা যায়নি");
+        setMsg(
+          err.response?.data?.message || "❌ User detail could not be fetched"
+        );
       } finally {
         setLoading(false);
       }
@@ -68,12 +69,10 @@ export default function UserDetail() {
             <p>
               <span className="font-semibold">Email:</span> {user.email}
             </p>
-            {/* প্রয়োজন হলে আরও ফিল্ড এখানে দেখাতে পারবেন */}
+            {/* If needed, you can display more fields here */}
           </div>
         ) : (
-          !msg && (
-            <p className="text-center text-gray-500">কোন ডেটা পাওয়া যায়নি।</p>
-          )
+          !msg && <p className="text-center text-gray-500">No data found.</p>
         )}
       </div>
     </div>

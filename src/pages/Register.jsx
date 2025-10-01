@@ -1,4 +1,3 @@
-// src/pages/Register.jsx
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -15,7 +14,7 @@ export default function Register() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  // ইনপুট পরিবর্তন হলে হ্যান্ডলার
+  // Handler when input changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -24,7 +23,7 @@ export default function Register() {
     });
   };
 
-  // ফর্ম সাবমিট
+  // Handler when form is submitted
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");

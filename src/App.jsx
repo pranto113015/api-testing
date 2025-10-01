@@ -13,14 +13,14 @@ import HomePage from "./pages/HomePage";
 export default function App() {
   return (
     <BrowserRouter>
-      <nav className="bg-emerald-600 text-white p-3 flex gap-4 text-sm">
+      <nav className="bg-emerald-600 text-white p-3 flex gap-5 text-sm">
         <Link to="/home-page">Home</Link>
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
         <Link to="/verify-otp">Verify OTP</Link>
-        <Link to="/forgot-password">Forgot</Link>
-        <Link to="/reset-password">Reset</Link>
-        <Link to="/user-detail">User</Link>
+        <Link to="/forgot-password">Forgot Password</Link>
+        <Link to="/reset-password">Reset Password</Link>
+        <Link to="/user-detail">User Details</Link>
         <Link to="/forgot-verify-otp">Forgot Verify OTP</Link>
         <Link to="/resend-otp">Resend OTP</Link>
         <Link to="/logout">Logout</Link>

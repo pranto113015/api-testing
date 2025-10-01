@@ -81,7 +81,7 @@ export default function VerifyOtp() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-50"
+            className="w-full bg-emerald-600 text-white py-2 px-4 rounded-md hover:bg-emerald-700 transition disabled:opacity-50"
           >
             {loading ? "Verifying..." : "Verify OTP"}
           </button>
@@ -91,7 +91,7 @@ export default function VerifyOtp() {
           <button
             onClick={handleResend}
             disabled={loading || !email}
-            className="text-blue-600 hover:underline disabled:opacity-50"
+            className="text-emerald-600 hover:underline disabled:opacity-50"
           >
             Resend OTP
           </button>

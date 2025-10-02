@@ -1,4 +1,3 @@
-// src/pages/ForgotPassword.jsx
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -49,7 +48,7 @@ export default function ForgotPassword() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-emerald-600 text-white py-2 px-4 rounded-md hover:bg-emerald-700 transition disabled:opacity-50"
+            className="w-full bg-emerald-600 text-white py-2 px-4 rounded-md hover:bg-emerald-700 transition disabled:opacity-50 cursor-pointer"
           >
             {loading ? "Sending..." : "Send Reset OTP"}
           </button>

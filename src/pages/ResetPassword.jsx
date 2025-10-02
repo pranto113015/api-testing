@@ -1,4 +1,3 @@
-// src/pages/ResetPassword.jsx
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -16,7 +15,7 @@ export default function ResetPassword() {
     setLoading(true);
 
     if (password !== passwordConfirmation) {
-      setMsg("❌ Password এবং Confirm Password মেলেনি");
+      setMsg("❌ Password and Confirm Password do not match.");
       setLoading(false);
       return;
     }
@@ -31,11 +30,11 @@ export default function ResetPassword() {
           password_confirmation: passwordConfirmation,
         }
       );
-      setMsg(res.data?.message || "✅ Password reset সফল হয়েছে");
+      setMsg(res.data?.message || "✅ Password reset successful.");
       console.log("Reset Password Response:", res.data);
     } catch (err) {
       console.error(err);
-      setMsg(err.response?.data?.message || "❌ Reset ব্যর্থ হয়েছে");
+      setMsg(err.response?.data?.message || "❌ Reset failed.");
     } finally {
       setLoading(false);
     }
@@ -97,7 +96,7 @@ export default function ResetPassword() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-emerald-600 text-white py-2 px-4 rounded-md hover:bg-emerald-700 transition disabled:opacity-50"
+            className="w-full bg-emerald-600 text-white py-2 px-4 rounded-md hover:bg-emerald-700 transition disabled:opacity-50 cursor-pointer"
           >
             {loading ? "Resetting..." : "Reset Password"}
           </button>

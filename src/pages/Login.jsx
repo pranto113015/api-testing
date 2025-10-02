@@ -35,7 +35,7 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="bg-emerald-600 text-white px-4 py-2 rounded">
+        <button className="bg-emerald-600 text-white px-4 py-2 rounded cursor-pointer">
           Login
         </button>
       </form>

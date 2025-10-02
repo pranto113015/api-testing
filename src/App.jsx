@@ -20,9 +20,9 @@ export default function App() {
         <Link to="/verify-otp">Verify OTP</Link>
         <Link to="/forgot-password">Forgot Password</Link>
         <Link to="/reset-password">Reset Password</Link>
-        <Link to="/user-detail">User Details</Link>
         <Link to="/forgot-verify-otp">Forgot Verify OTP</Link>
         <Link to="/resend-otp">Resend OTP</Link>
+        <Link to="/user-detail">User Details</Link>
         <Link to="/logout">Logout</Link>
       </nav>
       <Routes>
